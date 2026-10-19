@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KisanConnect | Farmer Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon">🌾</span>
+            <span>Kisan<span class="brand-highlight">Connect</span></span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home" class="nav-active">Home</a>
+            <a href="#market">Marketplace</a>
+            <a href="#prices">Market Prices</a>
+            <a href="#farmers">Farmers</a>
+        </nav>
+
+        <a href="#crops" class="nav-button">Explore Crops ↗</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">🌱 FROM FARM TO MARKET</span>
+
+                <h1>Grow Better.<br>
+                    <span>Sell Smarter.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Connect directly with farmers, discover crop prices,
+                    and make informed decisions for your agricultural business.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#crops" class="button button-primary">
+                        Explore Marketplace →
+                    </a>
+                    <a href="#prices" class="button button-outline">
+                        Compare Prices
+                    </a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <strong>Direct</strong>
+                        <span>Farmer connections</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <strong>Transparent</strong>
+                        <span>Sample price listings</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <strong>Simple</strong>
+                        <span>Marketplace browsing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+
+                <div class="hero-image-card">
+                    <div class="hero-crop-emoji">🌾</div>
+                    <span class="image-label">FRESH FROM THE FARM</span>
+                    <h3>Harvest of the season</h3>
+                    <p>Connecting growers with opportunities.</p>
+                </div>
+
+                <div class="floating-card floating-top">
+                    <span class="floating-icon">🌿</span>
+                    <div>
+                        <strong>Fresh Produce</strong>
+                        <small>Explore crop listings</small>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-bottom">
+                    <span class="floating-icon price-icon">₹</span>
+                    <div>
+                        <strong>Compare Prices</strong>
+                        <small>Make informed choices</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Strip -->
+        <section class="info-strip">
+            <div class="info-item">
+                <span class="info-icon">🌱</span>
+                <div>
+                    <h3>Farm Fresh</h3>
+                    <p>Explore crop listings</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="info-icon">🤝</span>
+                <div>
+                    <h3>Direct Connections</h3>
+                    <p>Discover farmer profiles</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="info-icon">📊</span>
+                <div>
+                    <h3>Price Comparison</h3>
+                    <p>Compare sample market rates</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="info-icon">🚚</span>
+                <div>
+                    <h3>Market Access</h3>
+                    <p>Find produce by location</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketplace Section -->
+        <section class="section" id="market">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">THE MARKETPLACE</span>
+                    <h2>Find your next <span class="green-text">harvest.</span></h2>
+                    <p>Browse produce listed by farmers.</p>
+                </div>
+
+                <a href="#crops" class="text-link">View all crops →</a>
+            </div>
+
+            <!-- Search form: visual only without JavaScript/backend -->
+            <form class="search-panel" action="#crops" method="get">
+                <label class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="search"
+                        name="crop"
+                        placeholder="Search wheat, rice, potatoes..."
+                        aria-label="Search crops"
+                    >
+                </label>
+
+                <label class="select-box">
+                    <span>📍</span>
+                    <select name="location" aria-label="Choose location">
+                        <option value="">All locations</option>
+                        <option>Prayagraj</option>
+                        <option>Lucknow</option>
+                        <option>Kanpur</option>
+                        <option>Gorakhpur</option>
+                        <option>Haryana</option>
+                        <option>Mirzapur</option>
+                        <option>Rajasthan</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Gonda</option>
+
+                    </select>
+                </label>
+
+                <button type="submit" class="button button-primary">
+                    Search Crops
+                </button>
+            </form>
+
+            <!-- Category filters are visual links -->
+            <div class="category-row">
+                <span class="category-label">Popular categories:</span>
+                <a href="#crops" class="category-pill selected">All Crops</a>
+                <a href="#wheat" class="category-pill">🌾 Grains</a>
+                <a href="#vegetables" class="category-pill">🥔 Vegetables</a>
+                <a href="#fruits" class="category-pill">🍅 Other Produce</a>
+            </div>
+
+            <div class="crop-grid" id="crops">
+
+                <!-- Crop Card 1 -->
+                <article class="crop-card" id="wheat">
+                    <div class="crop-image wheat-bg">
+                        <span class="crop-emoji">🌾</span>
+                        <span class="crop-badge">Grains</span>
+                        <span class="favorite-mark" aria-label="Featured crop">✦</span>
+                    </div>
+
+                    <div class="crop-details">
+                        <div class="crop-location">📍 Prayagraj, UP</div>
+                        <h3>Premium Wheat</h3>
+                        <p class="crop-description">Cleaned, quality wheat grains.</p>
+
+                        <div class="crop-price-row">
+                            <div>
+                                <span class="price-label">Listed price</span>
+                                <h2>₹2,500 <small>/ quintal</small></h2>
+                            </div>
+                            <span class="quality-badge">Grade A</span>
+                        </div>
+
+                        <div class="crop-meta">
+                            <span>📦 50 quintals</span>
+                            <span>🌿 Fresh harvest</span>
+                        </div>
+
+                        <a href="#farmers" class="card-button">View Farmer →</a>
+                    </div>
+                </article>
+
+                <!-- Crop Card 2 -->
+                <article class="crop-card">
+                    <div class="crop-image rice-bg">
+                        <span class="crop-emoji">🍚</span>
+                        <span class="crop-badge">Grains</span>
+                        <span class="favorite-mark" aria-label="Featured crop">✦</span>
+                    </div>
+
+                    <div class="crop-details">
+                        <div class="crop-location">📍 Lucknow, UP</div>
+                        <h3>Basmati Rice</h3>
+                        <p class="crop-description">Aromatic long-grain rice.</p>
+
+                        <div class="crop-price-row">
+                            <div>
+                                <span class="price-label">Listed price</span>
+                                <h2>₹4,200 <small>/ quintal</small></h2>
+                            </div>
+                            <span class="quality-badge">Grade A</span>
+                        </div>
+
+                        <div class="crop-meta">
+                            <span>📦 30 quintals</span>
+                            <span>🌿 Quality checked*</span>
+                        </div>
+
+                        <a href="#farmers" class="card-button">View Farmer →</a>
+                    </div>
+                </article>
+
+                <!-- Crop Card 3 -->
+                <article class="crop-card" id="vegetables">
+                    <div class="crop-image potato-bg">
+                        <span class="crop-emoji">🥔</span>
+                        <span class="crop-badge">Vegetables</span>
+                        <span class="favorite-mark" aria-label="Featured crop">✦</span>
+                    </div>
+
+                    <div class="crop-details">
+                        <div class="crop-location">📍 Kanpur, UP</div>
+                        <h3>Fresh Potatoes</h3>
+                        <p class="crop-description">Farm-grown table potatoes.</p>
+
+                        <div class="crop-price-row">
+                            <div>
+                                <span class="price-label">Listed price</span>
+                                <h2>₹1,200 <small>/ quintal</small></h2>
+                            </div>
+                            <span class="quality-badge">Fresh</span>
+                        </div>
+
+                        <div class="crop-meta">
+                            <span>📦 80 quintals</span>
+                            <span>🌿 Seasonal crop</span>
+                        </div>
+
+                        <a href="#farmers" class="card-button">View Farmer →</a>
+                    </div>
+                </article>
+
+                <!-- Crop Card 4 -->
+                <article class="crop-card" id="fruits">
+                    <div class="crop-image tomato-bg">
+                        <span class="crop-emoji">🍅</span>
+                        <span class="crop-badge">Vegetables</span>
+                        <span class="favorite-mark" aria-label="Featured crop">✦</span>
+                    </div>
+
+                    <div class="crop-details">
+                        <div class="crop-location">📍 Varanasi, UP</div>
+                        <h3>Fresh Tomatoes</h3>
+                        <p class="crop-description">Ripe tomatoes for local markets.</p>
+
+                        <div class="crop-price-row">
+                            <div>
+                                <span class="price-label">Listed price</span>
+                                <h2>₹1,800 <small>/ quintal</small></h2>
+                            </div>
+                            <span class="quality-badge">Fresh</span>
+                        </div>
+
+                        <div class="crop-meta">
+                            <span>📦 20 quintals</span>
+                            <span>🌿 Seasonal crop</span>
+                        </div>
+
+                        <a href="#farmers" class="card-button">View Farmer →</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="sample-note">
+                *All crop details, prices, quantities, quality labels and locations above are
+                illustrative demo data, not verified live listings.
+            </p>
+        </section>
+
+        <!-- Price Comparison Section -->
+        <section class="section price-section" id="prices">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">PRICE TRANSPARENCY</span>
+                    <h2>Compare <span class="green-text">market prices.</span></h2>
+                    <p>Sample rates across selected locations in Uttar Pradesh.</p>
+                </div>
+
+                <span class="demo-badge">DEMO DATA</span>
+            </div>
+
+            <div class="price-layout">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Crop</th>
+                                <th>Prayagraj</th>
+                                <th>Lucknow</th>
+                                <th>Kanpur</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="table-crop">
+                                        <span>🌾</span>
+                                        <div>
+                                            <strong>Wheat</strong>
+                                            <small>Per quintal</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>₹2,500</td>
+                                <td>₹2,450</td>
+                                <td>₹2,480</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="table-crop">
+                                        <span>🍚</span>
+                                        <div>
+                                            <strong>Basmati Rice</strong>
+                                            <small>Per quintal</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>₹4,100</td>
+                                <td>₹4,200</td>
+                                <td>₹4,150</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="table-crop">
+                                        <span>🥔</span>
+                                        <div>
+                                            <strong>Potatoes</strong>
+                                            <small>Per quintal</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>₹1,250</td>
+                                <td>₹1,150</td>
+                                <td>₹1,200</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="table-crop">
+                                        <span>🍅</span>
+                                        <div>
+                                            <strong>Tomatoes</strong>
+                                            <small>Per quintal</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>₹1,700</td>
+                                <td>₹1,900</td>
+                                <td>₹1,800</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="table-footnote">
+                        Demo figures only. These are not current mandi prices or official MSP rates.
+                        Actual prices vary by date, quality, market and transport costs.
+                    </p>
+                </div>
+
+                <aside class="comparison-card">
+                    <span class="comparison-icon">📊</span>
+                    <h3>Compare before you sell.</h3>
+                    <p>
+                        Check sample rates by location and consider transport costs,
+                        crop quality and buyer terms before choosing a market.
+                    </p>
+
+                    <div class="comparison-tip">
+                        <span>💡</span>
+                        <p>Always verify today's local mandi rates before making a sale.</p>
+                    </div>
+
+                    <a href="#farmers" class="button button-primary full-button">
+                        Meet the Farmers →
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Farmer Profiles -->
+        <section class="section farmers-section" id="farmers">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">MEET THE GROWERS</span>
+                    <h2>Know your <span class="green-text">farmers.</span></h2>
+                    <p>Sample farmer profiles from our demo marketplace.</p>
+                </div>
+
+                <a href="#farmers" class="text-link">Explore profiles →</a>
+            </div>
+
+            <div class="farmer-grid">
+
+                <article class="farmer-card">
+                    <div class="farmer-cover cover-one">
+                        <span>🌾</span>
+                    </div>
+                    <div class="farmer-avatar avatar-one">RK</div>
+
+                    <div class="farmer-info">
+                        <span class="verified-label">✓ DEMO PROFILE</span>
+                        <h3>Rajesh Kumar</h3>
+                        <p class="farmer-location">📍 Prayagraj, Uttar Pradesh</p>
+                        <p class="farmer-bio">
+                            Sample profile of a wheat grower offering seasonal grain produce.
+                        </p>
+
+                        <div class="farmer-stats">
+                            <div>
+                                <strong>Wheat</strong>
+                                <span>Main crop</span>
+                            </div>
+                            <div>
+                                <strong>50 qtl</strong>
+                                <span>Listed quantity</span>
+                            </div>
+                        </div>
+
+                        <a href="#crops" class="farmer-button">View Crop Listings →</a>
+                    </div>
+                </article>
+
+                <article class="farmer-card">
+                    <div class="farmer-cover cover-two">
+                        <span>🍚</span>
+                    </div>
+                    <div class="farmer-avatar avatar-two">SP</div>
+
+                    <div class="farmer-info">
+                        <span class="verified-label">✓ DEMO PROFILE</span>
+                        <h3>Sunita Patel</h3>
+                        <p class="farmer-location">📍 Lucknow, Uttar Pradesh</p>
+                        <p class="farmer-bio">
+                            Sample profile featuring rice produce for local buyers.
+                        </p>
+
+                        <div class="farmer-stats">
+                            <div>
+                                <strong>Basmati</strong>
+                                <span>Main crop</span>
+                            </div>
+                            <div>
+                                <strong>30 qtl</strong>
+                                <span>Listed quantity</span>
+                            </div>
+                        </div>
+
+                        <a href="#crops" class="farmer-button">View Crop Listings →</a>
+                    </div>
+                </article>
+
+                <article class="farmer-card">
+                    <div class="farmer-cover cover-three">
+                        <span>🥔</span>
+                    </div>
+                    <div class="farmer-avatar avatar-three">AM</div>
+
+                    <div class="farmer-info">
+                        <span class="verified-label">✓ DEMO PROFILE</span>
+                        <h3>Amit Mishra</h3>
+                        <p class="farmer-location">📍 Kanpur, Uttar Pradesh</p>
+                        <p class="farmer-bio">
+                            Sample profile showcasing seasonal vegetable production.
+                        </p>
+
+                        <div class="farmer-stats">
+                            <div>
+                                <strong>Potatoes</strong>
+                                <span>Main crop</span>
+                            </div>
+                            <div>
+                                <strong>80 qtl</strong>
+                                <span>Listed quantity</span>
+                            </div>
+                        </div>
+
+                        <a href="#crops" class="farmer-button">View Crop Listings →</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="sample-note">
+                Farmer names, profiles and quantities are fictional examples for this frontend demo.
+                They do not represent verified individuals.
+            </p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-icon">🌱</div>
+            <div>
+                <span class="eyebrow">GROW TOGETHER</span>
+                <h2>Better connections. Better opportunities.</h2>
+                <p>
+                    KisanConnect brings farmers and buyers closer through a simple marketplace concept.
+                </p>
+            </div>
+            <a href="#market" class="button button-light">Explore Marketplace →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#home" class="brand footer-brand">
+            <span class="brand-icon">🌾</span>
+            <span>Kisan<span class="brand-highlight">Connect</span></span>
+        </a>
+
+        <p>Connecting farmers with opportunities.</p>
+
+        <div class="footer-links">
+            <a href="#market">Marketplace</a>
+            <a href="#prices">Price Comparison</a>
+            <a href="#farmers">Farmers</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 KisanConnect · Frontend demonstration only
+        </p>
+    </footer>
+
+</body>
+</html>
